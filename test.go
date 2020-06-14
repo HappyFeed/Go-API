@@ -1,13 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"os"
+	"./models"
 )
 
 func main() {
-	os.Setenv("HOST", "localhost")
-	os.Unsetenv("HOST")
-	env := os.Getenv("HOST")
-	fmt.Println(env)
+	models.CreateConnection()
+	models.Ping()
 }
